@@ -278,3 +278,49 @@ if (form) {
 
   tryLoad(0);
 })();
+
+/* ---- footer visitor count (GoatCounter TOTAL) -------------------
+   Shows a muted "· 1,037 visits" / "· 1,037 ভিজিট" line in the footer.
+   Needs the GoatCounter dashboard setting "Allow adding visitor counts
+   on your website" to be ON; until then it silently stays hidden.
+   Follows the site's EN/বাংলা language toggle via <html lang>. */
+(function loadFooterVisitCount() {
+  const el = document.getElementById("visitCount");
+  if (!el) return;
+
+  let total = null;
+
+  function render() {
+    if (total === null) {
+      el.textContent = "";
+      return;
+    }
+    const bn = window.__siteLang === "bn";
+    el.textContent = "· " + total + " " + (bn ? "ভিজিট" : "visits");
+  }
+
+  const urls = [
+    "https://shibanidaslic.goatcounter.com/counter/TOTAL.json",
+    "https://shibanidaslic.goatcounter.com/counter/" + encodeURIComponent(location.pathname) + ".json",
+  ];
+
+  (function next(i) {
+    if (i >= urls.length) return;
+    fetch(urls[i], { headers: { Accept: "application/json" } })
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((d) => {
+        if (d && d.count) {
+          total = d.count;
+          render();
+        }
+      })
+      .catch(() => next(i + 1));
+  })(0);
+
+  if (window.MutationObserver) {
+    new MutationObserver(render).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["lang"],
+    });
+  }
+})();

@@ -146,6 +146,9 @@ The site counts visitors without cookies or personal data via
 
 - Stats dashboard: **https://shibanidaslic.goatcounter.com** (visits appear within seconds; you may need
   to open the site once while logged in to mark it "verified").
+- The footer can show a small muted total-visit line (`· 1,037 visits` / `· 1,037 ভিজিট`) that follows
+  the language toggle. For it to appear, enable the dashboard setting **"Allow adding visitor counts on
+  your website"** (off by default for privacy). Until then the line stays hidden (nothing breaks).
 - To switch the counting code later, just replace `shibanidaslic` in the line above with a new
   subdomain.
 

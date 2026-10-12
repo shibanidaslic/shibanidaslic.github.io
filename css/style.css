@@ -1694,6 +1694,11 @@ p {
   color: inherit;
 }
 
+.footer-bottom .footer-visits {
+  white-space: nowrap;
+  opacity: 0.92;
+}
+
 /* ---------- LIC brand chip (shown on a white plate so it looks right on light & dark) ---------- */
 .lic-chip {
   display: inline-flex;
