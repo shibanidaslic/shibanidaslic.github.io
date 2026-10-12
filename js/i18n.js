@@ -105,6 +105,8 @@
     "🤝 Guided by CLIA Dipak Bhakat": "🤝 CLIA দীপক ভকত-এর তত্ত্বাবধানে",
     "👨‍👩‍👧 50+ families helped": "👨‍👩‍👧 ৫০টির বেশি পরিবারকে সাহায্য",
     "Get in touch": "যোগাযোগ করুন",
+    "Scan to WhatsApp": "হোয়াটসঅ্যাপে স্ক্যান করুন",
+    "Point your phone camera here to start a chat.": "চ্যাট শুরু করতে আপনার ফোনের ক্যামেরা এখানে ধরুন।",
     "LIC policies arranged": "LIC পলিসি সাজানো হয়েছে",
     "Local families guided": "স্থানীয় পরিবারকে গাইড করা হয়েছে",
     "Serving Amarargarh": "অমরারগড়ে সেবা",

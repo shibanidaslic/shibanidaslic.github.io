@@ -149,6 +149,8 @@ The site counts visitors without cookies or personal data via
 - The footer can show a small muted total-visit line (`· 1,037 visits` / `· 1,037 ভিজিট`) that follows
   the language toggle. For it to appear, enable the dashboard setting **"Allow adding visitor counts on
   your website"** (off by default for privacy). Until then the line stays hidden (nothing breaks).
+- The line stays hidden until the total reaches **100** (controlled by `MIN_VISITS` in
+  `js/main.js`) so a brand-new site never shows a tiny, unconvincing number. Lower or raise it as you like.
 - To switch the counting code later, just replace `shibanidaslic` in the line above with a new
   subdomain.
 

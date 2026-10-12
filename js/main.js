@@ -290,8 +290,12 @@ if (form) {
 
   let total = null;
 
+  // Keep the line hidden until the number is worth showing.
+  const MIN_VISITS = 100;
+
   function render() {
-    if (total === null) {
+    const n = total === null ? NaN : parseInt(String(total).replace(/[^0-9]/g, ""), 10);
+    if (isNaN(n) || n < MIN_VISITS) {
       el.textContent = "";
       return;
     }

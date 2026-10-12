@@ -1550,6 +1550,46 @@ p {
   color: var(--gold-light);
 }
 
+.qr-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.qr-box img {
+  flex: 0 0 auto;
+  width: 116px;
+  height: 116px;
+  padding: 7px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.qr-box b {
+  display: block;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.qr-box span {
+  display: block;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 420px) {
+  .qr-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .map-strip {
   margin-top: 46px;
   border-radius: var(--radius);
