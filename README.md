@@ -135,23 +135,21 @@ a small, natural way for happy relatives to pass the contact on.
 
 ---
 
-## 📊 Optional privacy-light visitor stats (GoatCounter)
+## 📊 Privacy-light visitor stats (GoatCounter)
 
-The site can count visitors without cookies or personal data via
-[GoatCounter](https://www.goatcounter.com) (free tier). The snippet is already in `index.html`
-just before the scripts, **but you must claim your own code**:
+The site counts visitors without cookies or personal data via
+[GoatCounter](https://www.goatcounter.com) (free tier) — **already enabled** in `index.html`:
 
-1. Register a (free) account at https://www.goatcounter.com — you will get a subdomain such as `shibani`.
-2. In `index.html`, replace `REPLACE_YOURCODE` in this line:
+```html
+<script data-goatcounter="https://shibanidaslic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+```
 
-   ```html
-   <script data-goatcounter="https://REPLACE_YOURCODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-   ```
+- Stats dashboard: **https://shibanidaslic.goatcounter.com** (visits appear within seconds; you may need
+  to open the site once while logged in to mark it "verified").
+- To switch the counting code later, just replace `shibanidaslic` in the line above with a new
+  subdomain.
 
-   with your own code, e.g. `https://shibani.goatcounter.com/count`.
-
-Until you replace it, the line silently does nothing — the site remains fully functional and
-privacy-light. No cookies, no GDPR banner needed.
+No cookies, no GDPR banner needed.
 
 ---
 
